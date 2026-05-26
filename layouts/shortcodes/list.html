@@ -1,0 +1,7 @@
+<ul>
+  {{ $section := .Get "section" }}
+  {{ $limit := .Get "limit" | default 5 }}
+  {{ range first $limit (where site.RegularPages "Section" $section) }}
+    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+  {{ end }}
+</ul>
