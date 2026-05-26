@@ -1,5 +1,5 @@
 +++
-title = "Вот дерьмо"
+title = "Lorem Ipsum"
 layout = "home"
 weight = 1
 +++
