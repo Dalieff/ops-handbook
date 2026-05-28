@@ -1,5 +1,5 @@
 +++
-title = "Inventory.ini & Ansible.cfg"
+title = "ansible.cfg"
 tags = ["ansible"]
 date = "2026-02-15"
 +++  
