@@ -61,3 +61,52 @@ ansible_ssh_private_key_file=~/.ssh/id_ed25519
 ```ini
 ansible_ssh_common_args='-o ProxyCommand="ssh -W %h:%p -q user@bastion.example.com"'
 ```
+
+{{< notice note >}}
+Сейчас основным и рекомендуемым стандартом стал формат YAML (с расширением .yml или .yaml). INI-файлы всё ещё поддерживаются для обратной совместимости, и многие их используют по привычке, но сам Ansible уже давно продвигает именно YAML. Единый язык - и плейбуки, и переменные, и инвентарь теперь пишутся в одном стиле. Сложные структуры: В YAML намного проще и нагляднее описывать вложенные группы, списки и сложные конфигурации переменных. Вместо разделов в квадратных скобках [group] из INI-формата, в YAML структура строится за счет дерева отступов (иерархии). И вместо знака = для указания параметров хостов используются двоеточия : с обязательным пробелом после них. Отступы — строго по 2 пробела.
+{{< /notice >}}
+
+```yaml
+Инвентарь, переписанный в современном формате YAML
+all:
+  children:
+    frontend:
+      hosts:
+        nginx_vm:
+          ansible_host: 192.168.12.101
+    backend:
+      hosts:
+        apache_vm:
+          ansible_host: 192.168.12.102
+    database:
+      hosts:
+        postgresql_vm:
+          ansible_host: 192.168.12.103
+
+Хост, который не входит ни в одну группу - прямо в all.hosts
+all:
+  hosts:
+    standalone_vm:
+      ansible_host: 192.168.12.100
+  children:
+    frontend:
+      hosts:
+        nginx_vm:
+          ansible_host: 192.168.12.101
+
+Несколлько хостов в одной группе перечисляются внутри секции hosts этой группы.
+all:
+  children:
+    frontend:
+      hosts:
+        nginx_vm_1:
+          ansible_host: 192.168.12.101
+        nginx_vm_2:
+          ansible_host: 192.168.12.111
+    backend:
+      hosts:
+        apache_vm_1:
+          ansible_host: 192.168.12.102
+        apache_vm_2:
+          ansible_host: 192.168.12.112
+```
