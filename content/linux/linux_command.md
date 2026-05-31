@@ -1,5 +1,5 @@
 +++
-title = "Files & Folders"
+title = "Comm"
 tags = ["linux"]
 date = "2026-02-15"
 +++  
