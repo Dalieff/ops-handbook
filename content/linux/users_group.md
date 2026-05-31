@@ -11,17 +11,17 @@ date = "2026-02-15"
 Управление пользователями
 {{< /notice >}}
 ```bash
-whoami              # кто ты сейчас
-id                  # UID, GID, группы
-id user             # UID, GID и все группы пользователя
-who                 # кто сейчас в системе
-w                   # активные пользователи + процессы
-users               # список активных сессий пользователей (упрощённый), “bonus”
-last                # история входов пользователей
-lastlog             # last login per user (may be unavailable on some distros)
-getent passwd user  # Проверка пользователя в системе
-chsh -s /bin/bash                # сменить свой shell без root
-id -gn                           # показать только имя основной группы
+whoami                  # кто ты сейчас
+id                      # UID, GID, группы
+id user                 # UID, GID и все группы пользователя
+who                     # кто сейчас в системе
+w                       # активные пользователи + процессы
+users                   # список активных сессий пользователей (упрощённый), “bonus”
+last                    # история входов пользователей
+lastlog                 # last login per user (may be unavailable on some distros)
+getent passwd user      # Проверка пользователя в системе
+chsh -s /bin/bash       # сменить свой shell без root
+id -gn                  # показать только имя основной группы
 ```
 {{< notice info >}}
 Создание пользователей
@@ -40,10 +40,10 @@ useradd -m -s /bin/bash -U user             # -U = создать одноимё
 Passwords
 {{< /notice >}}
 ```bash
-passwd              # сменить свой пароль
-passwd user         # сменить пароль пользователя
-passwd -l user      # заблокировать пароль
-passwd -u user      # разблокировать пароль
+passwd                  # сменить свой пароль
+passwd user             # сменить пароль пользователя
+passwd -l user          # заблокировать пароль
+passwd -u user          # разблокировать пароль
 ```
 {{< notice info >}}
 Редактирование пользователей
@@ -62,20 +62,20 @@ usermod -U user                     # unlock account
 Remove users
 {{< /notice >}}
 ```bash
-userdel user                    # удалить пользователя
-userdel -r user                 # удаляет home и mail spool, потенциально данные
+userdel user                # удалить пользователя
+userdel -r user             # удаляет home и mail spool, потенциально данные
 ```
 {{< notice info >}}
 Управление группами
 {{< /notice >}}
 ```bash
-groups                          # группы текущего пользователя
-groups user                     # группы пользователя
-groupadd devs                   # создать группу
-groupmod -n newdevs devs        # переименовать группу
-groupdel devs                   # удалить группу
-gpasswd -a user devs            # добавить пользователя в группу. Это legacy tool, чаще используют usermod -aG
-gpasswd -d user devs            # удалить пользователя из группы
+groups                      # группы текущего пользователя
+groups user                 # группы пользователя
+groupadd devs               # создать группу
+groupmod -n newdevs devs    # переименовать группу
+groupdel devs               # удалить группу
+gpasswd -a user devs        # добавить пользователя в группу. Это legacy tool, чаще используют usermod -aG
+gpasswd -d user devs        # удалить пользователя из группы
 ```
 {{< notice info >}}
 Файлы учетных записей

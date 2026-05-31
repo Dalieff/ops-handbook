@@ -1,12 +1,10 @@
-
-
-
++++
+title = "Files & Folders"
+tags = ["linux"]
+date = "2026-02-15"
++++  
 
 stat -c "%a %n" file.txt    # права в числах
-
-
-
-
 {{< notice info >}}
 Права на пользовательском уровне
 {{< /notice >}}
