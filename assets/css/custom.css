@@ -1,8 +1,7 @@
-/* Расширяем центральную колонку */
-.content, .post {
-  max-width: 1050px;   /* можно менять */
-  margin-left: 1rem;      /* центрируем */
-  /*margin-right: 0rem;      /* центрируем */
+/* Центральный блок контента растягиваем по ширине */
+.content.container {
+    max-width: 70% !important;
+    width: 70% !important;
 }
 
 /*Блок описания уведомлений*/
@@ -22,3 +21,25 @@
 .notice-note { border-color: #6c757d; background: rgba(108,117,125,0.1); }
 .notice-warning { border-color: #f0ad4e; background: rgba(240,173,78,0.1); }
 .notice-error { border-color: #d9534f; background: rgba(217,83,79,0.1); }
+
+/* Отключаем toc */
+/* .article-toc {
+    display: none !important;
+}
+.toc-wrapper {
+    display: none !important;
+} */
+
+h4 {
+  font-size: 0.9rem;   /* поставь нужный размер */
+  line-height: 1.2;
+}
+h2 {
+  font-size: 0.8rem;   /* поставь нужный размер */
+  line-height: 1.2;
+  font-weight: 300;
+}
+
+.article-toc{
+font-size: .9em;
+}

@@ -121,3 +121,4 @@ pluralizelisttitles = false   # removes the automatically appended "s" on sideba
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+
