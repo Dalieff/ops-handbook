@@ -17,7 +17,7 @@ pluralizelisttitles = false   # removes the automatically appended "s" on sideba
     dark_mode = true                      # optional - defaults to false
     # favicon = "favicon.png"             # path to favicon (defaults to favicon.png)
 
-    front_page_content = ["home, about"] # Equivalent to the default value, add page bundle names to include them on the front page.
+    front_page_content = ["home"] # Equivalent to the default value, add page bundle names to include them on the front page.
 
     # MENU PLACEHOLDER
     # Menu dict keys:
