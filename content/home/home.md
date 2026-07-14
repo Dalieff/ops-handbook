@@ -4,6 +4,8 @@ layout = "home"
 weight = 1
 +++
 
+{{< credly "41b69b3a-e0c1-498f-81e1-70286a2423fb" >}}
+
 <div data-iframe-width="150" 
      data-iframe-height="270" 
      data-share-badge-id="41b69b3a-e0c1-498f-81e1-70286a2423fb" 
