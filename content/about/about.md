@@ -1,6 +1,6 @@
 +++
-title = "About"
-tags = ["about"]
+title = "Fors"
+tags = ["for"]
 date = "2026-02-15"
 +++  
 
