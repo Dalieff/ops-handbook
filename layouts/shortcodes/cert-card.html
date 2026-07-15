@@ -1,0 +1,17 @@
+<div class="cert-card" style="border: 1px solid #ccc; border-radius: 8px; width: 160px; text-align: center; padding: 8px; background: white;">
+  <!-- Картинка -->
+  <a href="{{ .Get "link" }}">
+    <img src="{{ .Get "src" }}" alt="{{ .Get "title" }}" style="width: 100%; border-radius: 4px;"/>
+  </a>
+  
+  <!-- Заголовок -->
+  <h3 style="margin: 10px 0 5px; font-size: 16px;">{{ .Get "title" }}</h3>
+  
+  <!-- Издатель -->
+  <div style="margin: 0; font-style: italic; color: #666; font-size: 14px;">Issuer: {{ .Get "issuer" }}</div>
+  
+  <!-- Футер -->
+  <div style="margin-top: 10px; border-top: 1px solid #eee; padding-top: 5px; font-size: 12px; color: #888;">
+    PROVIDED BY {{ .Get "provider" }}
+  </div>
+</div>

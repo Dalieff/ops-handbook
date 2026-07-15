@@ -43,3 +43,10 @@ h2 {
 .article-toc{
 font-size: .9em;
 }
+/*Шорткоды по горизонтали*/
+.cert-container {
+    display: flex;
+    flex-wrap: wrap; /* чтобы иконки переносились на новую строку, если их станет много */
+    gap: 15px;       /* расстояние между иконками */
+    align-items: center;
+}
