@@ -19,4 +19,12 @@ weight = 1
       issuer="Microsoft" 
       provider="Microsoft" 
       link="https://learn.microsoft.com/api/achievements/share/ru-ru/MaksimDaliev-1614/HZJ9CY58?sharingId=DE82F1ACBC5D080F" >}}
+
+ <!-- Карточка MongoDB -->
+  {{< cert-card 
+      src="/images/mongo.png" 
+      title="MongoDB Overview: Core Concepts and Architecture" 
+      issuer="MongoDB" 
+      provider="Credly" 
+      link="https://www.credly.com/badges/72ca8996-0702-44d6-be4f-3d68998e0b19/public_url" >}}
 </div>
